@@ -82,6 +82,27 @@ for (const page of pages) {
   });
 }
 
+test("every page connects back to TWiN and capitalizes Veteran in public language", () => {
+  for (const page of pages) {
+    const html = read(page);
+    const visibleText = html.replace(/<script\b[\s\S]*?<\/script>/gi, " ").replace(/<[^>]+>/g, " ");
+    assert.match(html, /href="https:\/\/thewizardnexus\.github\.io\/TheWizardNexus\.com\/"[^>]*>Visit TWiN ↗<\/a>/);
+    assert.doesNotMatch(visibleText, /\bveteran\b/, page + " contains a lowercase public use of Veteran");
+    assert.doesNotMatch(html, /signal-dot[^>]*><\/span>0[1-5]\s*\/\//, page + " retains a decorative page number");
+  }
+
+  assert.match(read("contact.html"), /href="https:\/\/thewizardnexus\.github\.io\/TheWizardNexus\.com\/contact\.html"/);
+});
+
+test("visible typography keeps an explicit 14 pixel minimum", () => {
+  const declarations = [...read("styles.css").matchAll(/(?:font-size:\s*|font:\s*(?:(?:normal|italic)\s+)?\d+\s+)(\d*\.?\d+)(rem|px)/g)];
+  const undersized = declarations
+    .map((match) => ({ declaration: match[0], pixels: Number(match[1]) * (match[2] === "rem" ? 16 : 1) }))
+    .filter(({ pixels }) => pixels < 14);
+
+  assert.deepEqual(undersized, []);
+});
+
 test("public claims retain the verified maturity and legal boundaries", () => {
   const publicText = [...pages.map(read), read("README.md")].join("\n");
   assert.doesNotMatch(publicText, /\$25,000|75 veterans|program completed|funds received/i);
