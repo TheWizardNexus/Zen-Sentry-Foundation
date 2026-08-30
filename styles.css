@@ -371,7 +371,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   margin-bottom: 2.5rem;
   grid-template-columns: minmax(0, 1.25fr) minmax(17rem, 0.75fr);
   gap: 2rem 4rem;
-  align-items: end;
+  align-items: center;
 }
 
 .section-heading h2 { margin-bottom: 0; }
@@ -457,7 +457,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   padding: clamp(2.75rem, 5vw, 4.25rem) 0 clamp(2.5rem, 4vw, 3.5rem);
   grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
   gap: 2rem 4rem;
-  align-items: end;
+  align-items: center;
   border-bottom: 1px solid var(--line);
 }
 
@@ -704,7 +704,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   padding: clamp(3rem, 6vw, 5rem) 0;
   grid-template-columns: 1fr 1fr;
   gap: 2rem 4rem;
-  align-items: end;
+  align-items: center;
 }
 
 .page-next p { margin: 0; color: var(--muted); }
@@ -785,6 +785,10 @@ h1 span, h2 span { color: var(--gold-soft); }
   .boundary-box,
   .page-next,
   .footer-main { grid-template-columns: 1fr; }
+
+  .section-heading,
+  .page-hero,
+  .page-next { align-items: start; }
 
   .page-hero { min-height: auto; gap: 2rem; }
   .page-hero h1 { margin-bottom: 0; }
