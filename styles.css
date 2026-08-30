@@ -327,18 +327,23 @@ h1 span, h2 span { color: var(--gold-soft); }
   display: flex;
   margin: 1.7rem 0 0;
   flex-wrap: wrap;
-  gap: 0.45rem 1.1rem;
-  color: var(--quiet);
-  font: 650 0.875rem/1.5 var(--mono);
+  gap: 0.55rem;
+  color: var(--white);
+  font: 750 0.875rem/1.25 var(--mono);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.proof-line span:not(:last-child)::after {
-  margin-left: 1.1rem;
-  color: var(--gold);
-  content: "•";
+.proof-line span {
+  width: fit-content;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(240, 213, 143, 0.55);
+  border-radius: 999px;
+  background: rgba(3, 10, 17, 0.88);
+  box-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
 }
+.proof-line span:nth-child(even) { border-color: rgba(98, 213, 208, 0.58); }
 
 .grant-signal {
   display: grid;
