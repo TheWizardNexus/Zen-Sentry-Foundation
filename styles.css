@@ -188,6 +188,7 @@ button, input, textarea, select { font: inherit; }
   border: 1px solid rgba(98, 213, 208, 0.42);
   border-radius: 999px;
   color: var(--teal);
+  text-transform: none;
 }
 #primary-navigation .nav-twin::after { display: none; }
 #primary-navigation .nav-twin:hover { border-color: var(--teal); background: rgba(98, 213, 208, 0.08); }
@@ -662,6 +663,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 .ledger tr:last-child th,
 .ledger tr:last-child td { border-bottom: 0; }
 .ledger th { width: 28%; color: var(--gold-soft); font: 750 0.875rem/1.5 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.ledger th.brand-case { text-transform: none; }
 .ledger td { color: var(--muted); }
 
 .partner-grid {
