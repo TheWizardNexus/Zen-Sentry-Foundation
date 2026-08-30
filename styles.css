@@ -776,7 +776,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   .js #primary-navigation .nav-cta { margin: 0.2rem 0 0; text-align: center; }
   html:not(.js) .site-header { align-items: flex-start; flex-wrap: wrap; }
   html:not(.js) #primary-navigation { flex: 1 1 100%; flex-wrap: wrap; }
-  .metric-grid, .dimensions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 52rem) {
@@ -792,6 +792,10 @@ h1 span, h2 span { color: var(--gold-soft); }
 
   .page-hero { min-height: auto; gap: 2rem; }
   .page-hero h1 { margin-bottom: 0; }
+  .dimensions {
+    grid-template-columns: repeat(5, minmax(10.5rem, 1fr));
+    overflow-x: auto;
+  }
   .route-grid, .card-grid, .name-grid, .snapshot, .contact-routes { grid-template-columns: 1fr; }
   .pathway { grid-template-columns: 1fr; }
   .pathway article { min-height: 13rem; }
