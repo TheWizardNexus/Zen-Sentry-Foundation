@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thewizardnexus.github.io/Zen-Sentry-Foundation/sitemap.xml
+Sitemap: https://zen-sentry-foundation.thewizardnexus.com/sitemap.xml
