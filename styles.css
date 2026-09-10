@@ -828,9 +828,11 @@ h1 span, h2 span { color: var(--gold-soft); }
   right: 0.9rem;
   bottom: 0.55rem;
   width: 4.5rem;
-  height: 3.25rem;
-  background: url('assets/lotus-linework.svg?v=complete-lotus') center / contain no-repeat;
-  opacity: 0.48;
+  aspect-ratio: 1024 / 690;
+  /* Frame the approved sample's large lotus, excluding its label and thumbnail. */
+  background: url('assets/lotus-flowing-linework-sample.png') center 25% / 122.4609375% auto no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.6;
   pointer-events: none;
 }
 .route-card:hover { border-color: var(--gold); }
