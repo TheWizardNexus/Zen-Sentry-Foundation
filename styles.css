@@ -828,8 +828,8 @@ h1 span, h2 span { color: var(--gold-soft); }
   right: 0.9rem;
   bottom: 0.55rem;
   width: 4.5rem;
-  height: 2.7rem;
-  background: url('assets/lotus-linework.svg?v=logo-petals') center / contain no-repeat;
+  height: 3.25rem;
+  background: url('assets/lotus-linework.svg?v=complete-lotus') center / contain no-repeat;
   opacity: 0.48;
   pointer-events: none;
 }

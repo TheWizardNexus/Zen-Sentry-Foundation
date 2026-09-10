@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 82 160 102" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 62 160 122" fill="none">
   <defs>
     <linearGradient id="petal-gold" x1="100" y1="86" x2="100" y2="180" gradientUnits="userSpaceOnUse">
       <stop stop-color="#e5c16c"/><stop offset=".55" stop-color="#b58a35"/><stop offset="1" stop-color="#e5c16c"/>
@@ -14,6 +14,10 @@
     <path d="M113 155C141 164 160 154 176 131C154 126 129 134 113 155Z"/>
     <path d="M94 165C49 148 33 132 31 87C55 98 74 125 94 165Z"/>
     <path d="M106 165C151 148 167 132 169 87C145 98 126 125 106 165Z"/>
+    <path d="M100 173C64 156 52 117 63 83C87 102 101 133 100 173Z"/>
+    <path d="M100 173C136 156 148 117 137 83C113 102 99 133 100 173Z"/>
+    <path d="M100 174C70 148 72 115 100 67C128 115 130 148 100 174Z"/>
+    <path d="M100 93L100 169" fill="none" stroke-width="1" opacity=".55"/>
     <path d="M100 179C80 151 52 150 44 112C67 119 81 137 100 157C119 137 133 119 156 112C148 150 120 151 100 179Z"/>
     <path d="M100 157L100 179M59 128C71 145 86 151 100 169C114 151 129 145 141 128" fill="none" stroke-width="1"/>
   </g>
