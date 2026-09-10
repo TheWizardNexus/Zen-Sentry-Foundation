@@ -519,7 +519,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   letter-spacing: -0.055em;
 }
 .name-card span { display: block; margin-top: 1rem; color: var(--teal); font: 750 0.875rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; }
-.name-card p { margin-top: 1.7rem; color: var(--muted); }
+.name-card p { margin: 1.7rem 0 0; color: var(--muted); }
 
 .program-steps {
   display: grid;
@@ -584,7 +584,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 
 .snapshot strong { display: block; color: var(--white); font-size: clamp(3rem, 6vw, 5.5rem); letter-spacing: -0.06em; line-height: 1; }
 .snapshot span { display: block; margin-top: 1rem; color: var(--gold); font: 750 0.875rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
-.snapshot p { margin-top: 2rem; color: var(--muted); }
+.snapshot p { margin: 2rem 0 0; color: var(--muted); }
 
 .dimensions {
   display: grid;
@@ -815,8 +815,11 @@ h1 span, h2 span { color: var(--gold-soft); }
 }
 .route-card, .info-card, .name-card, .contact-route, .program-step,
 .pathway article, .metric-card, .snapshot article, .dimension, .partner-grid li {
+  --lotus-height: calc(4.5rem * 690 / 1024);
   position: relative;
   isolation: isolate;
+  /* Reserve the lotus height, bottom inset, and a clear gap below all content. */
+  padding-bottom: calc(var(--lotus-height) + 0.55rem + 0.75rem);
   border-radius: 1.1rem 1.1rem 1.8rem 1.8rem;
 }
 .route-card::after, .info-card::after, .name-card::after, .contact-route::after,
@@ -828,7 +831,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   right: 0.9rem;
   bottom: 0.55rem;
   width: 4.5rem;
-  aspect-ratio: 1024 / 690;
+  height: var(--lotus-height);
   /* Frame the approved sample's large lotus, excluding its label and thumbnail. */
   background: url('assets/lotus-flowing-linework-sample.png') center 25% / 122.4609375% auto no-repeat;
   mix-blend-mode: screen;
