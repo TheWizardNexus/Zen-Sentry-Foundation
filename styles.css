@@ -813,15 +813,31 @@ h1 span, h2 span { color: var(--gold-soft); }
   border-radius: 1.5rem 0.5rem 1.5rem 0.5rem;
   background: radial-gradient(ellipse at top right, rgba(29, 68, 113, 0.3), transparent 70%), linear-gradient(145deg, rgb(8, 25, 45), rgb(3, 10, 20));
 }
-.route-card::after, .info-card::after {
-  content: ""; position: absolute; width: 8rem; height: 8rem; right: -4rem; bottom: -4rem;
-  border: 1px solid var(--line-gold); border-radius: 75% 0; transform: rotate(-45deg); pointer-events: none;
+.route-card, .info-card, .name-card, .contact-route, .program-step,
+.pathway article, .metric-card, .snapshot article, .dimension, .partner-grid li {
+  position: relative;
+  isolation: isolate;
+  border-radius: 1.1rem 1.1rem 1.8rem 1.8rem;
+}
+.route-card::after, .info-card::after, .name-card::after, .contact-route::after,
+.program-step::after, .pathway article::after, .metric-card::after,
+.snapshot article::after, .dimension::after, .partner-grid li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0.9rem;
+  bottom: 0.55rem;
+  width: 4.5rem;
+  height: 2.7rem;
+  background: url('assets/lotus-linework.svg') center / contain no-repeat;
+  opacity: 0.48;
+  pointer-events: none;
 }
 .route-card:hover { border-color: var(--gold); }
 .section-heading { position: relative; padding-top: 1.5rem; }
 .section-heading::before { content: ""; position: absolute; top: 0; left: 0; width: 4rem; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); }
 .pathway { gap: 1rem; border: 0; background: transparent; }
-.pathway article { border: 1px solid var(--line-gold); border-radius: 0.75rem 0.75rem 3rem 3rem; background: linear-gradient(160deg, rgb(10, 29, 50), rgb(3, 10, 20)); }
+.pathway article { border: 1px solid var(--line-gold); border-radius: 1.1rem 1.1rem 1.8rem 1.8rem; background: linear-gradient(160deg, rgb(10, 29, 50), rgb(3, 10, 20)); }
 .pathway span, .step-number { border-radius: 40% 40% 50% 50%; box-shadow: 0 0 0 4px rgba(221, 180, 83, 0.06); }
 .page-hero { isolation: isolate; }
 .page-hero::after { z-index: -1; top: 1rem; right: 1rem; width: 16rem; height: 16rem; border: 0; border-radius: 0; box-shadow: none; background: url('assets/zen-sentry-logo.jpg') center / contain no-repeat; opacity: 0.12; }
