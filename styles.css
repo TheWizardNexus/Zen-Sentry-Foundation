@@ -8,9 +8,9 @@
   --line-gold: rgba(221, 180, 83, 0.34);
   --white: #f5f7f4;
   --muted: #a9bac0;
-  --quiet: #718890;
-  --teal: #62d5d0;
-  --teal-strong: #37bfc3;
+  --quiet: #a6adb5;
+  --teal: #e0bd68;
+  --teal-strong: #caa34e;
   --gold: #ddb453;
   --gold-soft: #f0d58f;
   --danger: #ffcf88;
@@ -711,46 +711,6 @@ h1 span, h2 span { color: var(--gold-soft); }
 
 .page-next p { margin: 0; color: var(--muted); }
 
-.site-footer {
-  width: min(100% - 2rem, var(--max));
-  margin: 0 auto;
-  padding: 3rem 0 2rem;
-}
-
-.crisis-bar {
-  display: grid;
-  margin-bottom: 2.7rem;
-  padding: 1rem 1.2rem;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.8rem 1rem;
-  align-items: center;
-  border: 1px solid var(--line-gold);
-  border-radius: 0.7rem;
-  background: rgba(221, 180, 83, 0.07);
-}
-
-.crisis-bar strong { color: var(--gold-soft); }
-.crisis-bar span { color: var(--muted); }
-.crisis-bar a { color: var(--teal); font-weight: 800; }
-
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 2rem 4rem;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-}
-
-.footer-brand p { display: grid; margin: 0; }
-.footer-brand span { margin-top: 0.25rem; color: var(--quiet); font-size: 0.875rem; }
-.footer-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.65rem 1.1rem; }
-.footer-nav a { color: var(--muted); font-size: 0.875rem; }
-.footer-note { margin: 2.5rem 0 0; color: var(--quiet); font: 650 0.875rem/1.6 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; }
-
 .js .reveal { opacity: 0; transform: translateY(1.2rem); }
 .js .reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity 560ms ease, transform 560ms ease; }
 
@@ -838,13 +798,56 @@ h1 span, h2 span { color: var(--gold-soft); }
   .button, .route-card, .info-card, .name-card, .metric-card, .dimension, .contact-route { border: 1px solid CanvasText; }
 }
 
-/* Public page directory; scoped to the footer sitemap. */
-footer:has(.site-map-navigation) { flex-wrap: wrap; }
-footer .site-map-navigation { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 1.5rem 2rem; grid-column: 1 / -1; flex: 0 0 100%; width: 100%; box-sizing: border-box; margin: 1.5rem 0 0; padding: 1.5rem 0 0; border-top: 1px solid currentColor; text-align: left; }
-footer .site-map-navigation .site-map-group { display: block; min-width: 0; padding: 0; margin: 0; background: none; border: 0; }
-footer .site-map-navigation h2 { margin: 0 0 .75rem; font-family: inherit; font-size: 1.05rem; font-weight: 700; line-height: 1.4; letter-spacing: normal; text-transform: none; color: inherit; }
-footer .site-map-navigation ul { display: grid; gap: .25rem; list-style: none; padding: 0; margin: 0; }
-footer .site-map-navigation li { display: block; padding: 0; margin: 0; }
-footer .site-map-navigation a { display: inline-block; padding: .4rem 0; margin: 0; font-family: inherit; font-size: .95rem; font-weight: 400; line-height: 1.5; letter-spacing: normal; text-transform: none; color: inherit; text-decoration: none; }
-footer .site-map-navigation a:hover { text-decoration: underline; text-underline-offset: .2em; }
-footer .site-map-navigation a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+/* The shield, gold linework and curved lotus forms carry the original seal into the interface. */
+.site-header { border-bottom-color: var(--line-gold); }
+.brand-mark { width: 3.3rem; height: 3.3rem; border: 0; border-radius: 0; box-shadow: none; }
+.brand-copy small { color: var(--gold); }
+#primary-navigation .nav-twin { border-color: var(--line-gold); color: var(--gold-soft); }
+#primary-navigation .nav-twin:hover { background: rgba(221, 180, 83, 0.1); border-color: var(--gold); }
+.button-primary { background: linear-gradient(135deg, rgb(240, 213, 143), rgb(202, 163, 78)); border-color: var(--gold); color: var(--void); }
+.button-primary:hover { background: rgb(245, 223, 168); color: var(--void); }
+.route-card, .info-card, .name-card, .contact-route, .program-step {
+  border-color: var(--line-gold);
+  border-top: 2px solid var(--gold);
+  border-radius: 1.5rem 0.5rem 1.5rem 0.5rem;
+  background: radial-gradient(ellipse at top right, rgba(29, 68, 113, 0.3), transparent 70%), linear-gradient(145deg, rgb(8, 25, 45), rgb(3, 10, 20));
+}
+.route-card::after, .info-card::after {
+  content: ""; position: absolute; width: 8rem; height: 8rem; right: -4rem; bottom: -4rem;
+  border: 1px solid var(--line-gold); border-radius: 75% 0; transform: rotate(-45deg); pointer-events: none;
+}
+.route-card:hover { border-color: var(--gold); }
+.section-heading { position: relative; padding-top: 1.5rem; }
+.section-heading::before { content: ""; position: absolute; top: 0; left: 0; width: 4rem; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); }
+.pathway { gap: 1rem; border: 0; background: transparent; }
+.pathway article { border: 1px solid var(--line-gold); border-radius: 0.75rem 0.75rem 3rem 3rem; background: linear-gradient(160deg, rgb(10, 29, 50), rgb(3, 10, 20)); }
+.pathway span, .step-number { border-radius: 40% 40% 50% 50%; box-shadow: 0 0 0 4px rgba(221, 180, 83, 0.06); }
+.page-hero { isolation: isolate; }
+.page-hero::after { z-index: -1; top: 1rem; right: 1rem; width: 16rem; height: 16rem; border: 0; border-radius: 0; box-shadow: none; background: url('assets/zen-sentry-logo.jpg') center / contain no-repeat; opacity: 0.12; }
+.metric-card, .snapshot article { border-top-color: var(--gold); }
+.site-footer {
+  width: min(100% - 2rem, var(--max)); margin: 2rem auto 1.5rem; padding: clamp(1.4rem, 4vw, 3rem);
+  border: 1px solid var(--line-gold); border-top: 3px solid var(--gold); border-radius: 2rem 2rem 0.75rem 0.75rem;
+  background: radial-gradient(ellipse at 5% 0%, rgba(28, 64, 110, 0.24), transparent 50%), rgb(3, 9, 18);
+}
+.footer-main { display: grid; grid-template-columns: minmax(15rem, 0.9fr) minmax(0, 1.6fr); gap: 2.5rem; align-items: start; }
+.footer-brand { display: flex; gap: 1rem; align-items: center; }
+.footer-brand img { width: clamp(5rem, 8vw, 7rem); height: auto; flex: 0 0 auto; }
+.footer-brand strong { display: block; color: var(--gold-soft); font-size: 1.4rem; line-height: 1.2; letter-spacing: -0.025em; }
+.footer-tagline { display: block; margin-top: 0.8rem; color: var(--muted); font-size: 0.875rem; line-height: 1.7; }
+.site-map-navigation { display: grid; grid-template-columns: 0.8fr 1.2fr 1fr; gap: 1.5rem; }
+.site-map-navigation h2 { color: var(--gold-soft); font: 700 0.875rem/1.5 var(--sans); letter-spacing: 0.02em; margin: 0 0 1rem; }
+.site-map-navigation ul { padding: 0; margin: 0; list-style: none; }
+.site-map-navigation a { display: inline-block; padding: 0.4rem 0; color: var(--muted); font-size: 0.95rem; }
+.site-map-navigation a:hover { color: var(--gold-soft); text-decoration: underline; text-underline-offset: 0.3em; }
+.crisis-bar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; margin-top: 2.5rem; padding: 1.25rem 0; border-top: 1px solid var(--line-gold); border-bottom: 1px solid var(--line-gold); }
+.crisis-bar strong { color: var(--gold-soft); font-size: 0.95rem; }
+.crisis-bar span { color: var(--muted); font-size: 0.875rem; }
+.crisis-bar a { color: var(--gold-soft); font-size: 0.875rem; font-weight: 700; text-decoration: underline; text-underline-offset: 0.3em; }
+.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-top: 1.25rem; color: var(--muted); font-size: 0.875rem; }
+.footer-bottom p { margin: 0; }
+@media (max-width: 68rem) { .footer-main { grid-template-columns: 1fr; } }
+@media (max-width: 52rem) { .crisis-bar { grid-template-columns: 1fr; } }
+@media (max-width: 36rem) { .site-map-navigation { grid-template-columns: 1fr 1fr; } .site-footer { width: calc(100% - 1.2rem); } .footer-brand img { width: 5rem; } }
+@media (max-width: 24rem) { .site-map-navigation { grid-template-columns: 1fr; } }

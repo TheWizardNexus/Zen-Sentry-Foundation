@@ -92,7 +92,7 @@ test("every page connects back to TWiN and preserves public brand capitalization
     assert.doesNotMatch(html, /signal-dot[^>]*><\/span>0[1-5]\s*\/\//, page + " retains a decorative page number");
   }
 
-  assert.match(read("contact.html"), /href="https:\/\/thewizardnexus\.github\.io\/TheWizardNexus\.com\/contact\.html"/);
+  assert.match(read("contact.html"), /href="https:\/\/www\.thewizardnexus\.com\/contact\.html"/);
   assert.match(read("styles.css"), /#primary-navigation \.nav-twin \{[^}]*text-transform:\s*none;/s);
 });
 
