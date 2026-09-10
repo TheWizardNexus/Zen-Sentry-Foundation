@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 72" fill="none">
-  <g stroke="#ddb453" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M60 65C43 49 43 28 60 7C77 28 77 49 60 65Z" fill="#0a1d32"/>
-    <path d="M60 65C34 62 20 44 19 19C42 24 57 41 60 65Z" fill="#0a1d32"/>
-    <path d="M60 65C86 62 100 44 101 19C78 24 63 41 60 65Z" fill="#0a1d32"/>
-    <path d="M60 65C34 72 13 58 5 38C28 35 48 45 60 65Z" fill="#08192d"/>
-    <path d="M60 65C86 72 107 58 115 38C92 35 72 45 60 65Z" fill="#08192d"/>
-    <path d="M25 46C39 49 50 56 60 65C70 56 81 49 95 46" opacity=".6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 82 160 102" fill="none">
+  <defs>
+    <linearGradient id="petal-gold" x1="100" y1="86" x2="100" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e5c16c"/><stop offset=".55" stop-color="#b58a35"/><stop offset="1" stop-color="#e5c16c"/>
+    </linearGradient>
+    <linearGradient id="petal-blue" x1="100" y1="95" x2="100" y2="175" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102f51"/><stop offset="1" stop-color="#04101f"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#petal-gold)" stroke-width="1.7" fill="url(#petal-blue)" stroke-linejoin="miter">
+    <path d="M100 178C85 162 69 167 56 170C61 159 75 151 91 153L100 178Z"/>
+    <path d="M100 178C115 162 131 167 144 170C139 159 125 151 109 153L100 178Z"/>
+    <path d="M87 155C59 164 40 154 24 131C46 126 71 134 87 155Z"/>
+    <path d="M113 155C141 164 160 154 176 131C154 126 129 134 113 155Z"/>
+    <path d="M94 165C49 148 33 132 31 87C55 98 74 125 94 165Z"/>
+    <path d="M106 165C151 148 167 132 169 87C145 98 126 125 106 165Z"/>
+    <path d="M100 179C80 151 52 150 44 112C67 119 81 137 100 157C119 137 133 119 156 112C148 150 120 151 100 179Z"/>
+    <path d="M100 157L100 179M59 128C71 145 86 151 100 169C114 151 129 145 141 128" fill="none" stroke-width="1"/>
   </g>
 </svg>

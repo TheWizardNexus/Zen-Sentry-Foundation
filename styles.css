@@ -829,7 +829,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   bottom: 0.55rem;
   width: 4.5rem;
   height: 2.7rem;
-  background: url('assets/lotus-linework.svg') center / contain no-repeat;
+  background: url('assets/lotus-linework.svg?v=logo-petals') center / contain no-repeat;
   opacity: 0.48;
   pointer-events: none;
 }
