@@ -86,7 +86,7 @@ test("every page connects back to TWiN and preserves public brand capitalization
   for (const page of pages) {
     const html = read(page);
     const visibleText = html.replace(/<script\b[\s\S]*?<\/script>/gi, " ").replace(/<[^>]+>/g, " ");
-    assert.match(html, /href="https:\/\/thewizardnexus\.github\.io\/TheWizardNexus\.com\/"[^>]*>Visit TWiN ↗<\/a>/);
+    assert.match(html, /href="https:\/\/www\.thewizardnexus\.com\/index\.html"[^>]*>Visit TWiN ↗<\/a>/);
     assert.doesNotMatch(visibleText, /\bveteran\b/, page + " contains a lowercase public use of Veteran");
     assert.doesNotMatch(visibleText, /\bTWIN\b|The Wizard Nexus/, page + " does not use the TWiN public brand styling");
     assert.doesNotMatch(html, /signal-dot[^>]*><\/span>0[1-5]\s*\/\//, page + " retains a decorative page number");
