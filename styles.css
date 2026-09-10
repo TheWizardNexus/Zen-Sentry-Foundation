@@ -395,8 +395,8 @@ h1 span, h2 span { color: var(--gold-soft); }
 .route-card,
 .info-card {
   position: relative;
-  min-height: 14rem;
-  padding: clamp(1.3rem, 3vw, 2.2rem);
+  min-height: 0;
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 0.8rem;
@@ -409,7 +409,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 
 .card-code {
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--gold);
   font: 750 0.875rem/1 var(--mono);
   letter-spacing: 0.08em;
@@ -418,7 +418,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 
 .route-card p,
 .info-card p { max-width: 35rem; margin: 0.8rem 0 0; color: var(--muted); }
-.route-card i { display: block; margin-top: 2rem; color: var(--teal); font-style: normal; font-weight: 750; }
+.route-card i { display: block; margin-top: 1.2rem; color: var(--teal); font-style: normal; font-weight: 750; }
 
 .pathway {
   display: grid;
@@ -431,7 +431,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 }
 
 .pathway article {
-  min-height: 17rem;
+  min-height: 0;
   padding: 2rem;
   background: var(--panel);
 }
@@ -448,7 +448,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   font: 750 0.875rem/1 var(--mono);
 }
 
-.pathway h3 { margin-top: 3.3rem; }
+.pathway h3 { margin-top: 1.25rem; }
 .pathway p { margin-bottom: 0; color: var(--muted); }
 
 .page-hero {
@@ -505,7 +505,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 }
 
 .name-card {
-  min-height: 15rem;
+  min-height: 0;
   padding: 1.6rem;
   border: 1px solid var(--line);
   border-radius: 0.8rem;
@@ -528,7 +528,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 
 .program-step {
   display: grid;
-  min-height: 13rem;
+  min-height: 0;
   padding: 2rem;
   grid-template-columns: 4rem 1fr minmax(15rem, 0.7fr);
   gap: 1.3rem 2rem;
@@ -576,7 +576,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 }
 
 .snapshot article {
-  min-height: 16rem;
+  min-height: 0;
   padding: 1.8rem;
   border-top: 2px solid var(--teal);
   background: var(--panel);
@@ -691,7 +691,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 }
 
 .contact-route {
-  min-height: 18rem;
+  min-height: 0;
   padding: 1.7rem;
   border: 1px solid var(--line);
   border-radius: 0.8rem;
@@ -699,7 +699,7 @@ h1 span, h2 span { color: var(--gold-soft); }
 }
 
 .contact-route p { color: var(--muted); }
-.contact-route a { display: inline-block; margin-top: 2rem; color: var(--teal); font-weight: 750; }
+.contact-route a { display: inline-block; margin-top: 1.2rem; color: var(--teal); font-weight: 750; }
 
 .page-next {
   display: grid;
@@ -760,7 +760,7 @@ h1 span, h2 span { color: var(--gold-soft); }
   }
   .route-grid, .card-grid, .name-grid, .snapshot, .contact-routes { grid-template-columns: 1fr; }
   .pathway { grid-template-columns: 1fr; }
-  .pathway article { min-height: 13rem; }
+  .pathway article { min-height: 0; }
   .program-step { grid-template-columns: 3rem 1fr; }
   .program-step .step-outcome { grid-column: 2; }
   .partner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
